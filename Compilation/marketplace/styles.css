@@ -1,0 +1,142 @@
+:root {
+    --main-color:#f4e8da;
+    --main-accent-color: #8F857D;
+    --sub-accent-color1: #f7f0f5;
+    --sub-accent--color2: #725346;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    background-color: var(--main-color);
+}
+
+header {
+    padding: 1rem;
+    background-color: var(--sub-accent--color2);
+    color: var(--sub-accent-color1);
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 60px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+header nav ul {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+header nav ul li, header nav ul li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--sub-accent-color1);
+}
+
+#hero {
+    display: grid;
+    position: relative;
+    z-index: 1;
+    grid-column: 1/span 3;
+    grid-row: 1/span 3;
+}
+
+#hero img {
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#hero h2 {
+    font-size: 50px;
+    padding-right: 3rem;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+    align-self: center;
+    color: var(--main-color);
+}
+
+#product {
+    margin: 3rem;
+    text-align: center;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 45px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: auto;
+}
+
+.card {
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    gap: 50px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.card button {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-accent-color);
+    color: var(--sub-accent-color1);
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.card dd {
+    margin: 0;
+}
+
+.card:hover {
+    transform: scale(1.15);
+}
+
+.card button:hover {
+    background-color: var(--sub-accent--color2);
+}
+
+
+footer {
+    padding: 1rem;
+    background-color: var(--main-accent-color);
+    display: grid;
+    gap: 2rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--main-color);
+}
